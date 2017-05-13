@@ -1,0 +1,17 @@
+I didn't use any hand-made programs other than looking at stuff to see where i could get more data.
+I'll explain the process just to probe I did it all.
+
+Steps to get to the Key.
+
+-First you need to accept the SSL certificate in some way. Because you will need HTTP/2 (for PUSH)
+ and Firefox has it by default, is better just to do everything in Firefox.
+-Enter the assigned URL. Click on the hyperLink.
+-You will get to a page with a 206. Keep refreshing until you get a 200 or 304. 
+	-Trying to use Range to get all the data will still get a 206. Best way is to
+	let firefox keep updating or getting an extension to autodownload it.
+-Use that code in a text to png generator. You will get another new range 4017-8120
+-You will get something along the lines "I pushed it to you". That's not it.
+-Go back to the root. If you read it, you'll notice that they "whisper" to you. Enter that site
+-Only other site appart from ghost that gives a custom view other than the default. Good
+-Now make another POST petition using firefox console, and put the header: "Range: bytes=4017-8120"
+-The request response will have the final token.
